@@ -69,12 +69,12 @@ kotlin {
     }
 }
 
-//sqldelight {
-//    database("NoteDatabase") {
-//        packageName = "com.plcoding.noteappkmm.database"
-//        sourceFolders = listOf("sqldelight")
-//    }
-//}
+sqldelight {
+    database("NoteDatabase") {
+        packageName = "com.pbussolutions.noteappkmp.database"
+        sourceFolders = listOf("sqldelight")
+    }
+}
 
 
 android {
@@ -82,5 +82,6 @@ android {
     compileSdk = 33
     defaultConfig {
         minSdk = 28
+        targetSdk = 33
     }
 }
