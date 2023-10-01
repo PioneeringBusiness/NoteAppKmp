@@ -50,7 +50,7 @@ fun NoteItem(
 		modifier = modifier
 			.clip(RoundedCornerShape(5.dp))
 			.background(backgroundColor)
-			.clickable { onNoteClick }
+			.clickable { onNoteClick() }
 			.padding(16.dp)
 	) {
 		Row(

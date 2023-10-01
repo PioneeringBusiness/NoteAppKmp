@@ -1,5 +1,6 @@
 package com.pbussolutions.noteappkmp.android.note_detail
 
+import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -55,6 +56,8 @@ class NoteDetailViewModel @Inject constructor(
 	private var existingNoteId: Long? = null
 
 	init {
+		// TODO: Note not being updated/    
+		Log.d("NoteDetailViewModel", "CY existing note id $existingNoteId")
 		savedStateHandle.get<Long>("noteId")?.let { existingNoteId ->
 			if(existingNoteId == -1L) {
 				return@let

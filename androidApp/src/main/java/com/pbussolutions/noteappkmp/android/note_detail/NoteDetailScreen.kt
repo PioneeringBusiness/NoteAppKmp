@@ -22,6 +22,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
 import com.pbussolutions.noteappkmp.android.R
 
 /**
@@ -33,14 +34,15 @@ import com.pbussolutions.noteappkmp.android.R
 @Composable
 fun NoteDetailScreen(
 	noteId: Long,
-	viewModel: NoteDetailViewModel = hiltViewModel()
+	viewModel: NoteDetailViewModel = hiltViewModel(),
+	navController: NavHostController
 ) {
 	val state by viewModel.state.collectAsState()
 	val hasNoteBeenSaved by viewModel.hasNoteBeenSaved.collectAsState()
 
 	LaunchedEffect(key1 = hasNoteBeenSaved) {
 		if(hasNoteBeenSaved) {
-			// TODO: Navigate Pop back stack
+			navController.popBackStack()
 		}
 	}
 
@@ -79,7 +81,7 @@ fun NoteDetailScreen(
 			Spacer(modifier = Modifier.height(16.dp))
 			TransparentHintTextField(
 				text = state.noteContent,
-				hint = "Enter some contnet..",
+				hint = "Enter some content..",
 				isHintVisible = state.isNoteContentHintVisible,
 				onValueChanged = viewModel::onNoteContentChanged,
 				onFocusChanged = {
