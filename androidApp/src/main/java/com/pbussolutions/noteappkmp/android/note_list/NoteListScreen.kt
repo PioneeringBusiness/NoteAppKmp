@@ -50,7 +50,7 @@ fun NoteListScreen(
 		viewModel.loadNotes()
 	}
 
-	// Use scafold because using Floating Action Button
+	// Use scaffold because using Floating Action Button
 	Scaffold(
 		floatingActionButton = {
 			FloatingActionButton(
