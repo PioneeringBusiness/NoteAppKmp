@@ -47,7 +47,7 @@ fun NoteItem(
 		DateTimeUtil.formatNoteDate(note.created)
 	}
 	Column(
-		modifier = Modifier
+		modifier = modifier
 			.clip(RoundedCornerShape(5.dp))
 			.background(backgroundColor)
 			.clickable { onNoteClick }
