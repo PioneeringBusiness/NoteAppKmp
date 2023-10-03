@@ -56,12 +56,13 @@ class NoteDetailViewModel @Inject constructor(
 	private var existingNoteId: Long? = null
 
 	init {
-		// TODO: Note not being updated/    
+		// TODO: Note not being updated/
 		Log.d("NoteDetailViewModel", "CY existing note id $existingNoteId")
 		savedStateHandle.get<Long>("noteId")?.let { existingNoteId ->
 			if(existingNoteId == -1L) {
 				return@let
 			}
+			this.existingNoteId = existingNoteId
 			viewModelScope.launch {
 				noteDataSource.getNoteById(existingNoteId)?.let { note ->
 					savedStateHandle["noteTitle"] = note.title
