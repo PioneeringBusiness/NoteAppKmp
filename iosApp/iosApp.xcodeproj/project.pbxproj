@@ -14,6 +14,8 @@
 		962A57482ACBACD900CD5FE5 /* NoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962A57472ACBACD900CD5FE5 /* NoteListViewModel.swift */; };
 		962A574A2ACBAD9F00CD5FE5 /* NoteListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962A57492ACBAD9F00CD5FE5 /* NoteListScreen.swift */; };
 		962A574C2ACBB2B000CD5FE5 /* HidesbleSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962A574B2ACBB2B000CD5FE5 /* HidesbleSearchTextField.swift */; };
+		96FE9A2D2ACCFB8600A937CA /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE9A2C2ACCFB8600A937CA /* NoteItem.swift */; };
+		96FE9A2F2ACD00C400A937CA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE9A2E2ACD00C400A937CA /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +41,8 @@
 		962A57472ACBACD900CD5FE5 /* NoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewModel.swift; sourceTree = "<group>"; };
 		962A57492ACBAD9F00CD5FE5 /* NoteListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListScreen.swift; sourceTree = "<group>"; };
 		962A574B2ACBB2B000CD5FE5 /* HidesbleSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HidesbleSearchTextField.swift; sourceTree = "<group>"; };
+		96FE9A2C2ACCFB8600A937CA /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
+		96FE9A2E2ACD00C400A937CA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				96FE9A2E2ACD00C400A937CA /* Colors.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 				962A57472ACBACD900CD5FE5 /* NoteListViewModel.swift */,
 				962A57492ACBAD9F00CD5FE5 /* NoteListScreen.swift */,
 				962A574B2ACBB2B000CD5FE5 /* HidesbleSearchTextField.swift */,
+				96FE9A2C2ACCFB8600A937CA /* NoteItem.swift */,
 			);
 			path = note_list;
 			sourceTree = "<group>";
@@ -199,8 +205,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FE9A2D2ACCFB8600A937CA /* NoteItem.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				962A574A2ACBAD9F00CD5FE5 /* NoteListScreen.swift in Sources */,
+				96FE9A2F2ACD00C400A937CA /* Colors.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				962A574C2ACBB2B000CD5FE5 /* HidesbleSearchTextField.swift in Sources */,
 				962A57482ACBACD900CD5FE5 /* NoteListViewModel.swift in Sources */,

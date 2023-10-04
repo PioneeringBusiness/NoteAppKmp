@@ -9,14 +9,38 @@
 import SwiftUI
 
 // TODO start at https://www.youtube.com/watch?v=1w-LTUm_iDE 2:12:28
-struct HidesbleSearchTextField: View {
+struct HidesbleSearchTextField<Destination: View>: View {
+    
+    var onSearchToggled: () -> Void
+    var destinationProvider: () -> Destination
+    var isSearchActive: Bool
+    @Binding var searchText: String
+    
     var body: some View {
-        Text("Hello, Charlie! You are aswesome")
+        HStack {
+            TextField("Search...", text: $searchText)
+                .textFieldStyle(.roundedBorder)
+                .opacity(isSearchActive ? 1 : 0)
+            if !isSearchActive {
+                Spacer()
+            }
+            Button(action: onSearchToggled) {
+                Image(systemName: isSearchActive ? "xmark" : "magnifyingglass")
+            }
+            NavigationLink(destination: destinationProvider()) {
+                Image(systemName: "plus")
+            }
+        }
     }
 }
 
 struct HidesbleSearchTextField_Previews: PreviewProvider {
     static var previews: some View {
-        HidesbleSearchTextField()
+        HidesbleSearchTextField(
+            onSearchToggled: {},
+            destinationProvider: { EmptyView() },
+            isSearchActive: true,
+            searchText: .constant("Hello World")
+        )
     }
 }
