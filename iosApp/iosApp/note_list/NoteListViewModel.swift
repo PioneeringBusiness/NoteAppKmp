@@ -17,7 +17,7 @@ extension NoteListScreen {
         
         private var notes = [Note]()
         @Published private(set)var filteredNotes = [Note]()
-        @Published private(set)var searchText = "" {
+        @Published var searchText = "" {
             didSet {
                 self.searchNotes.execute(notes: self.notes, query: searchText)
             }
@@ -52,6 +52,10 @@ extension NoteListScreen {
         
         func setNoteDataSource(noteDataSource: NoteDataSource) {
             self.noteDataSource = noteDataSource
+//            noteDataSource.insertNote(note: Note(id: nil, title: "Note title", content: "Note content", colorHex: 0xFF2355, created: DateTimeUtil().now()),
+//                                      completionHandler: { error in
+//                
+//            })
         }
     }
 }
