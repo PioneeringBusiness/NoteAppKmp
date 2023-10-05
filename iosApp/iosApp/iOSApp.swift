@@ -9,7 +9,7 @@ struct iOSApp: App {
 		WindowGroup {
             NavigationView {
                 NoteListScreen(noteDataSource: databasModule.noteDataSource)
-            }
+            }.accentColor(.black)
             
 		}
 	}
